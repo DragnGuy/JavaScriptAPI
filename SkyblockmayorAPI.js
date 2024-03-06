@@ -1,11 +1,11 @@
 fetch("https://api.hypixel.net/v2/resources/skyblock/election")
 .then(Response => Response.json())
 .then(res => {
-    const data = res.mayors;
+    const data = res.mayor;
     let rows = '';
-    data.forEach(mayors => {
-        rows += <tr><td></td></tr>
+    data.forEach(mayor => {
+        rows += <tr><td>${mayor.key}</td><td>${mayor.name}</td><td>${mayor.perks}</td></tr>
     })
-    document.getElementById('').innerHTML = rows;
+    document.getElementById('tableRows').innerHTML = rows;
 })
 .catch(error => console.log(error))
