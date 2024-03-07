@@ -7,7 +7,7 @@ fetch("https://api.hypixel.net/v2/resources/skyblock/election")
         let candidate1perks = '';
         if (candidate1.perks && candidate1.perks.length > 0) {
             candidate1.perks.forEach(perk => {
-                candidate1perks += `${perk.name}:<br>${perk.description}<br>`;
+                candidate1perks += `<h3>${perk.name}:</h3>${perk.description}<br>`;
         })};
         rows += `<tr>
         <td>${res.mayor.election.candidates[0].name}</td>
@@ -20,7 +20,7 @@ fetch("https://api.hypixel.net/v2/resources/skyblock/election")
         let candidate2perks = '';
         if (candidate2.perks && candidate2.perks.length > 0) {
             candidate2.perks.forEach(perk => {
-                candidate2perks += `${perk.name}:<br>${perk.description}<br>`;
+                candidate2perks += `<h3>${perk.name}:</h3>${perk.description}<br>`;
         })};
         rows += `<tr>
         <td>${res.mayor.election.candidates[1].name}</td>
@@ -33,7 +33,7 @@ fetch("https://api.hypixel.net/v2/resources/skyblock/election")
         let candidate3perks = '';
         if (candidate3.perks && candidate3.perks.length > 0) {
             candidate3.perks.forEach(perk => {
-                candidate3perks += `${perk.name}:<br>${perk.description}<br>`;
+                candidate3perks += `<h3>${perk.name}:</h3>${perk.description}<br>`;
         })};
         rows += `<tr>
         <td>${res.mayor.election.candidates[2].name}</td>
@@ -46,7 +46,7 @@ fetch("https://api.hypixel.net/v2/resources/skyblock/election")
         let candidate4perks = '';
         if (candidate4.perks && candidate4.perks.length > 0) {
             candidate4.perks.forEach(perk => {
-                candidate4perks += `${perk.name}:<br>${perk.description}<br>`;
+                candidate4perks += `<h3>${perk.name}:</h3>${perk.description}<br>`;
         })};
         rows += `<tr>
         <td>${res.mayor.election.candidates[3].name}</td>
@@ -59,7 +59,7 @@ fetch("https://api.hypixel.net/v2/resources/skyblock/election")
         let candidate5perks = '';
         if (candidate5.perks && candidate4.perks.length > 0) {
             candidate5.perks.forEach(perk => {
-                candidate5perks += `${perk.name}:<br>${perk.description}<br>`;
+                candidate5perks += `<h3>${perk.name}:</h3>${perk.description}<br>`;
         })};
         rows += `<tr>
         <td>${res.mayor.election.candidates[4].name}</td>
@@ -68,6 +68,6 @@ fetch("https://api.hypixel.net/v2/resources/skyblock/election")
         <td>${res.mayor.election.candidates[4].votes}</td>
         </tr>`;
 
-        document.getElementById('RunningCandidatesTable').innerHTML = rows;
+        document.getElementById('LastRunningCandidatesTable').innerHTML = rows;
     })
     .catch(error => console.log(error));

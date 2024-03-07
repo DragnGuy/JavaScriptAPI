@@ -1,16 +1,20 @@
 body{
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: rgb(36, 32, 32);
 }
 
-.ElectionInfoTable{
+.PreviousElectionInfoTable{
+    width: 100%;
+}
+.CurrentElectionInfoTable{
     width: 100%;
 }
 
 td{
-    border: 2px solid white;
+    border: 2px solid rgb(138, 133, 133);
+    text-align: center;
 }
 
 th{
-    border: 2px solid white;
+    border: 2px solid rgb(224, 215, 215);
 }
